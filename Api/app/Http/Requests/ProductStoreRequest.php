@@ -11,7 +11,7 @@ class ProductStoreRequest extends FormRequest
      */
     public function authorize(): bool
     {
-        return false;
+        return true;
     }
 
     /**
@@ -43,14 +43,14 @@ class ProductStoreRequest extends FormRequest
 
             return [
                 'name.required' => 'É obrigatório adicionar um nome!',
-                'image' => 'É obrigatório adicionar uma imagem!',
-                'description' => 'É obrigatório existir uma descrição!',
+                'image.required' => 'É obrigatório adicionar uma imagem!',
+                'description.required' => 'É obrigatório existir uma descrição!',
             ];
         }else{
 
             return [
                 'name.required' => 'É obrigatório adicionar um nome!',
-                'description' => 'É obrigatório existir uma descrição!',
+                'description.required' => 'É obrigatório existir uma descrição!',
             ];
         }
     }

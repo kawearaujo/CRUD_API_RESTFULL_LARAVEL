@@ -20,3 +20,7 @@ use App\Http\Controllers\ProductController;
 //     return $request->user();
 // });
 Route::get('products',[ProductController::class, 'index']);
+Route::get('products/{id}',[ProductController::class, 'show']);
+Route::post('products',[ProductController::class, 'store']);
+Route::put('productsupdate/{id}',[ProductController::class, 'update']);
+Route::delete('productsdelete/{id}',[ProductController::class, 'destroy']);
